@@ -1,6 +1,7 @@
 
 // import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/navbar/navbar'
 import React, {useState} from "react";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import Home from "./Home";
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+    <NavBar/>
       <ul>
         <li>
           <Link to="/">Home</Link>
