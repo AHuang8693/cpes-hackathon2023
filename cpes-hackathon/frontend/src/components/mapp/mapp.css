@@ -1,0 +1,27 @@
+.leaflet-container {
+    height: 80vh;
+    width: 100%;
+  }
+  
+  .leaflet-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .leaflet-search-icon {
+    margin-right: 10px;
+  }
+  
+  .leaflet-search-input {
+    flex-grow: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  
