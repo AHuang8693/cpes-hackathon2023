@@ -1,0 +1,78 @@
+.topNav
+{
+    background-color: rgb(27, 193, 63);
+    width: 100%;
+    position: sticky;
+    align-items: center;
+    display: flex;
+    height: 90px; 
+    z-index: 100; /*ADD FONT FAMILY*/
+}
+
+.topCenter {
+    flex: 6;
+}
+
+.topPfpImg {
+    margin-right: 10px;
+    width:auto;
+    height:auto;
+    border-radius: 50%;
+
+}
+
+.topRight, .topLeft {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topNavList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 100;
+    list-style:none;
+
+}
+
+.navListItem {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+
+.topList {
+    list-style:none;
+    background-color: rgb(9, 104, 29);
+    border-radius: 10px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navListItemSide.Login {
+    color: brown;
+    flex: 5;
+    font-size: 20px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.navListItemSide.Create {
+    color: brown;
+    flex: 5;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+.toplogo{
+    width: auto;
+    height:auto;
+    margin-right: 350px;
+    cursor: pointer;
+}
