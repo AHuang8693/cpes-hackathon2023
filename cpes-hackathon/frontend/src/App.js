@@ -1,15 +1,33 @@
+
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navbar/navbar'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import React, {useState} from "react";
+import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
+import Home from "./Home";
+import Page from "./Page";
 
 
 function App() {
-  const currentUser = false;
-  console.log(currentUser);
+
   return (
-    <div className='App'>
-      <NavBar/>
+    <Router>
+    <div className="App">
+    <NavBar/>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/Page">Page</Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route exact path='/' element={< Home />}></Route>
+        <Route exact path='/Page' element={< Page />}></Route>
+      </Routes>
     </div>
+  </Router>
   );
 }
 

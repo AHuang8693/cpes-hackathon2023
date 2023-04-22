@@ -22,7 +22,7 @@
 }
 
 .topRight, .topLeft {
-    flex: 3;
+    flex: 0.75;
     display: flex;
     align-items: center;
     justify-content: center;

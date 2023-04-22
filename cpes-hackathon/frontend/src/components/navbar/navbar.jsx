@@ -1,12 +1,24 @@
 import React from 'react'
 import "./navbar.css"
 import {Link} from "react-router-dom"
+import Box from '@mui/material/Box';
+
 
 export default function NavBar(){
     return(
         <div className='topNav'>
             <div className='topLeft'>
-                <img src='/images/tree.png' alt='logo' className='toplogo'/>
+            <Box
+                component="img"
+                sx={{
+                height: 90,
+                width: 100,
+                maxHeight: { xs: 90, md: 90 },
+                maxWidth: { xs: 100, md: 100 },
+                }}
+                alt="logo"
+                src='/images/tree.png'
+            />
             </div>
             <div className='topCenter'>
                 <ul className='topNavList'>
