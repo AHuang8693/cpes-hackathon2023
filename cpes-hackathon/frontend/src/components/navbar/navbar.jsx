@@ -8,6 +8,7 @@ export default function NavBar(){
     return(
         <div className='topNav'>
             <div className='topLeft'>
+            <Link className='link' to='/'>
             <Box
                 component="img"
                 sx={{
@@ -19,20 +20,27 @@ export default function NavBar(){
                 alt="logo"
                 src='/images/tree.png'
             />
+            </Link>
             </div>
             <div className='topCenter'>
                 <ul className='topNavList'>
                     <li className='navListItem'>
+                        <Link className='link' to='/'>
                         Home
+                        </Link>
                     </li>
                     <li className='navListItem'>
-                        Info
+                        <Link className='link' to='/Info'>
+                            About Us
+                        </Link>
                     </li>
                     <li className='navListItem'>
                         Carpool
                     </li>
                     <li className='navListItem'>
-                        Contact
+                        <Link className='link' to='/Contacts'>
+                            Contacts
+                        </Link>
                     </li>
                     <li className='navListItem'>
                         Logout
@@ -42,7 +50,7 @@ export default function NavBar(){
             </div>
             <div className='topRight'>
 
-                <img className = "topPfpImg" src='pfp'alt='pfp' />
+                <Link className='link' to='/settings'><img className = "topPfpImg" src='/images/tree.png'alt='pfp' /></Link>
 
                 <ul className='topList'>
                 <li className='navListItemSide Create'>
