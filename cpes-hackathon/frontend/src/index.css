@@ -1,5 +1,6 @@
 .map-container {
   height: 400px;
+  size: 100px;
   }
 
   .sidebar {
@@ -15,3 +16,4 @@
     border-radius: 4px;
   }
   
+
