@@ -82,7 +82,7 @@ const PostForm = () => {
         {posts.map((post, index) => (
           <div className="post" key={index}>
             <button className="post-header" onClick={() => handlePostClick(index)}>
-              <h3>{post.name}</h3>
+              <h3>{post.name+":"}</h3>
               <p>{post.source} to {post.destination}</p>
             </button>
             <Maps source={post.source} destination={post.destination} show={index === selectedPostIndex} />

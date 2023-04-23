@@ -60,11 +60,6 @@ const Maps = ({ source, destination, show }) => {
           directions.setDestination(destination);
         })
     
-        // Create a new marker at the post coordinates
-        // const marker = new mapboxgl.Marker()
-        //   .setLngLat([post.longitude, post.latitude])
-        //   .addTo(map);
-    
         setMap(map);
     
         return () => {
