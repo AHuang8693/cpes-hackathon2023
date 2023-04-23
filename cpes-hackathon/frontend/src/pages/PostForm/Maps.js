@@ -53,29 +53,38 @@ const Maps = ({ source, numPeople, destination, show }) => {
           controls: { instructions: false, inputs: false, profile: false, profileSwitcher: false}
         });
         
-        directions.on('route', (event) => {
-          console.log('fire drections on route');
-          const route = event.route[0];
-          const distance = route.distance;
-          setMiles(getMiles(distance));
-          console.log('Distance:', distance);
-        });  
-            
-        console.log('number of people', numPeople);
-        console.log('miles', miles);
-        console.log('gallons', Number((miles /25.4) * (numPeople - 1) ).toFixed(2));
+        try {
+          directions.on('route', (event) => {
+            console.log('fire drections on route');
+              const route = event.route[0];
+              const distance = route?.distance;
+              if(distance !== undefined){
+                setMiles(getMiles(distance));
+                console.log('Distance:', distance);
+                
+              }
+          });
+        } catch(error) {
+
+        }
         
-        map.addControl(directions, 'top-left');
+        try {
+          map.addControl(directions, 'top-left');
+        } catch (error) {
+        }
         
-        map.on('load',  function() {
-            handleGeocode(source);
-            // directions.setOrigin([latitude, longitude]);
-            directions.setOrigin(source); // can be address in form setOrigin("12, Elm Street, NY")
-            
-            handleGeocode(destination);
-            // directions.setDestinaion([latitude, longitude]);
-            directions.setDestination(destination);
-        })
+        try{
+          map.on('load',  function() {
+              handleGeocode(source);
+              // directions.setOrigin([latitude, longitude]);
+              directions.setOrigin(source); // can be address in form setOrigin("12, Elm Street, NY")
+              
+              handleGeocode(destination);
+              // directions.setDestinaion([latitude, longitude]);
+              directions.setDestination(destination);
+          })}
+          catch (error) {
+          }
         const n_c = map.getCenter();
         setCenter([n_c.lng, n_c.lat]);
         setMap(map);
