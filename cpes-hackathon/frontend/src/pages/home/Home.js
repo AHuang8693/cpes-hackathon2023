@@ -5,7 +5,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 function Home(props) {
-    return (
+  var c = "CONTACT US AT:";
+  return (
       <div className="Home">
         <div className="HomeTop">
           <div className="HomeTopIntro">
@@ -23,7 +24,7 @@ function Home(props) {
         <div className="HomeBottom">
           <li className="HomeBottomList">
             <ul className="homelistitemC">
-              CONTACT US AT:
+                {c}
             </ul>
             <ul className="homelistitem">
               (805) 439-2239 <i class="fa-solid fa-phone"></i>

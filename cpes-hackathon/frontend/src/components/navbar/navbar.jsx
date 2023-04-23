@@ -39,11 +39,11 @@ export default function NavBar(){
                             CARPOOL
                         </Link>
                     </li>
-                    <li className='navListItem'>
+                    {/* <li className='navListItem'>
                         <Link className='link' to='/Contacts'>
                             CONTACTS
                         </Link>
-                    </li>
+                    </li> */}
                     
                 </ul>
             </div>
