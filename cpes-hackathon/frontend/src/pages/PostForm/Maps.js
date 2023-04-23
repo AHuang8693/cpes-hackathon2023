@@ -13,6 +13,10 @@ const Maps = ({ source, numPeople, destination, show }) => {
   const [latitude, setLatitude] = useState(null);
   const [miles, setMiles] = useState(null);
   const [gallons, setGallons] = useState(null);
+  const [people, setPeople] = useState(null);
+
+  const [center, setCenter] = useState([-77.0369, 38.9072]);
+  const [done, setDone] = useState(null);
 
   const handleGeocode = async (address) => {
     const [longitude, latitude] = await geocode(address);
@@ -26,12 +30,12 @@ const Maps = ({ source, numPeople, destination, show }) => {
     return Number(meters*0.000621371192).toFixed(0);
   }
 
+
   useEffect(() => {
       if (show) {
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/streets-v11',
-          center: [36.3, 54.5],
           zoom: 15,
           interactive: false,
           attributionControl: false
@@ -50,25 +54,30 @@ const Maps = ({ source, numPeople, destination, show }) => {
         });
         
         directions.on('route', (event) => {
+          console.log('fire drections on route');
           const route = event.route[0];
           const distance = route.distance;
-          setMiles(String(getMiles(distance)));
+          setMiles(getMiles(distance));
           console.log('Distance:', distance);
-        });
+        });  
+            
+        console.log('number of people', numPeople);
+        console.log('miles', miles);
+        console.log('gallons', Number((miles /25.4) * (numPeople - 1) ).toFixed(2));
         
-        setGallons(String(Number((miles /25.4) * Number(numPeople - 1)).toFixed(2)));
         map.addControl(directions, 'top-left');
         
         map.on('load',  function() {
-          handleGeocode(source);
-          // directions.setOrigin([latitude, longitude]);
-          directions.setOrigin(source); // can be address in form setOrigin("12, Elm Street, NY")
-
-          handleGeocode(destination);
-          // directions.setDestinaion([latitude, longitude]);
-          directions.setDestination(destination);
+            handleGeocode(source);
+            // directions.setOrigin([latitude, longitude]);
+            directions.setOrigin(source); // can be address in form setOrigin("12, Elm Street, NY")
+            
+            handleGeocode(destination);
+            // directions.setDestinaion([latitude, longitude]);
+            directions.setDestination(destination);
         })
-    
+        const n_c = map.getCenter();
+        setCenter([n_c.lng, n_c.lat]);
         setMap(map);
 
         return () => {
@@ -78,7 +87,17 @@ const Maps = ({ source, numPeople, destination, show }) => {
         map.remove();
         setMap(null);
       }
-    }, [source, destination, show ]);
+    }, [source, destination, numPeople, show]);
+
+    useEffect(() => {
+        if (map) {
+          // Save the current center coordinates to the state variable
+        //   const newCenter = map.getCenter();
+        //   setCenter([newCenter.lng, newCenter.lat]);
+          setGallons(String( Number((miles /25.4) * (numPeople - 1) ).toFixed(2)));
+        }
+      }, [miles]);
+    
 
   return (
     <div className="map-container" style={{ display: show ? 'block' : 'none' }}>
