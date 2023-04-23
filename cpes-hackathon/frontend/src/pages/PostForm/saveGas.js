@@ -5,12 +5,11 @@ const saveGas = ({miles}) => {
     return (
         <div className="saveGas">
           <li className="HomeBottomList">
-            <ul className="homelistitemC">
+            <ul className="homelistitem">
                 Wow you saved {str_miles} miles!!
             </ul>
           </li>
         </div>
     )
 }
-
 export default saveGas;

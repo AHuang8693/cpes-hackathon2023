@@ -7,7 +7,7 @@ import saveGas from './saveGas';
 
 mapboxgl.accessToken = "pk.eyJ1IjoidGVzdGVydXNlcnkyMTMiLCJhIjoiY2xnc3djNXliMGd4bTNkcDVoOTd4d3k5OCJ9.-JBH6EFBLFniuXjUArO-BQ";
 
-const Maps = ({ source, destination, show }) => {
+const Maps = ({ source, numPeople, destination, show }) => {
   const [map, setMap] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [latitude, setLatitude] = useState(null);
@@ -56,7 +56,7 @@ const Maps = ({ source, destination, show }) => {
           console.log('Distance:', distance);
         });
         
-        setGallons(String(Number(miles /25.4).toFixed(2)));
+        setGallons(String(Number((miles /25.4) * Number(numPeople - 1)).toFixed(2)));
         map.addControl(directions, 'top-left');
         
         map.on('load',  function() {
@@ -83,7 +83,7 @@ const Maps = ({ source, destination, show }) => {
   return (
     <div className="map-container" style={{ display: show ? 'block' : 'none' }}>
       <div id="map" className="map"></div>
-      
+      <saveGas />
       <div className="Home">
           <li className="HomeBottomList">
             <ul className="homelistitemC">
