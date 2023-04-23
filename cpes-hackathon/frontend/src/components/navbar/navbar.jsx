@@ -8,6 +8,7 @@ export default function NavBar(){
     return(
         <div className='topNav'>
             <div className='topLeft'>
+            <Link className='link' to='/'>
             <Box
                 component="img"
                 sx={{
@@ -17,32 +18,38 @@ export default function NavBar(){
                 maxWidth: { xs: 100, md: 100 },
                 }}
                 alt="logo"
-                src='/images/tree.png'
+                src='/images/logo.png'
             />
+            </Link>
             </div>
             <div className='topCenter'>
                 <ul className='topNavList'>
                     <li className='navListItem'>
-                        Home
+                        <Link className='link' to='/'>
+                        HOME
+                        </Link>
                     </li>
                     <li className='navListItem'>
-                        Info
+                        <Link className='link' to='/Info'>
+                            ABOUT US
+                        </Link>
                     </li>
                     <li className='navListItem'>
-                        Carpool
+                        <Link className='link' to='/PostForm'>
+                            CARPOOL
+                        </Link>
                     </li>
-                    <li className='navListItem'>
-                        Contact
-                    </li>
-                    <li className='navListItem'>
-                        Logout
-                    </li>
+                    {/* <li className='navListItem'>
+                        <Link className='link' to='/Contacts'>
+                            CONTACTS
+                        </Link>
+                    </li> */}
                     
                 </ul>
             </div>
-            <div className='topRight'>
+            {/* <div className='topRight'>
 
-                <img className = "topPfpImg" src='pfp'alt='pfp' />
+                <Link className='link' to='/settings'><img className = "topPfpImg" src='/images/tree.png'alt='pfp' /></Link>
 
                 <ul className='topList'>
                 <li className='navListItemSide Create'>
@@ -54,7 +61,7 @@ export default function NavBar(){
 
                 </ul>
 
-            </div>
+            </div> */}
         </div>
 
 
