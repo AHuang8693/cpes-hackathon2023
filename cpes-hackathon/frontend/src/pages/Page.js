@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 function Page(props) {
     return (
@@ -5,8 +7,7 @@ function Page(props) {
         <h2>This is a second page</h2>
 
       </div>
-
-    )
+    );
 }
 
 export default Page;

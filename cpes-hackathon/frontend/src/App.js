@@ -1,4 +1,3 @@
-
 // import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navbar/navbar'
@@ -9,6 +8,7 @@ import Page from "./pages/Page";
 import Info from "./pages/info/info";
 import Contacts from './pages/Contacts/contacts';
 import Settings from './pages/Settings/settings';
+import PostForm from './pages/PostForm/PostForm';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         <Route exact path='/' element={< Home />}></Route>
         <Route exact path='/Page' element={< Page />}></Route>
         <Route exact path='/Info' element={< Info />}></Route>
+        <Route exact path='/PostForm' element={< PostForm/>}></Route> 
         <Route exact path='/Contacts' element={<Contacts/>}></Route>
         <Route exact path='/Settings' element={<Settings/>}></Route>
       </Routes>

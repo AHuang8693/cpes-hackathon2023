@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./home.css"
 import { Icon, IconButton, SvgIcon } from "@mui/material";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 function Home(props) {
     return (

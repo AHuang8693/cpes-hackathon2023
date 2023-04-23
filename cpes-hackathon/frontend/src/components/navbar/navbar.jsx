@@ -35,7 +35,9 @@ export default function NavBar(){
                         </Link>
                     </li>
                     <li className='navListItem'>
-                        CARPOOL
+                        <Link className='link' to='/PostForm'>
+                            CARPOOL
+                        </Link>
                     </li>
                     <li className='navListItem'>
                         <Link className='link' to='/Contacts'>
