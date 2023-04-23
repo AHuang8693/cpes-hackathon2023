@@ -31,7 +31,7 @@ const Maps = ({ source, destination, show }) => {
           style: 'mapbox://styles/mapbox/streets-v11',
           center: [36.3, 54.5],
           zoom: 15,
-          interactive: false
+          interactive: false,
         });
 
         if (map) {
@@ -43,7 +43,7 @@ const Maps = ({ source, destination, show }) => {
     
         const directions = new Directions({
           accessToken: mapboxgl.accessToken,
-        
+          controls: { instructions: false, inputs: false, profile: false, profileSwitcher: false}
         });
         
         directions.on('route', (event) => {
