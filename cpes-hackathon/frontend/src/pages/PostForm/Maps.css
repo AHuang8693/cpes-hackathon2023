@@ -69,6 +69,12 @@
     font-size: 24px;
     margin: 0;
   }
+
+  .post-header h2 {
+    font-size: 24px;
+    margin: 2;
+    padding-left: 25px;
+  }
   
   .map-container {
     position: relative;
