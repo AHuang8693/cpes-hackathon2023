@@ -20,19 +20,15 @@
 
 }
 
-.HomeTopGetStarted {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-    margin-left: 550px;
-    margin-right: 550px;
+.button {
     border-radius: 20px;
+    padding: none;
 }
 
 .HomeBottom {
     background-color: lightgreen;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .HomeBottomList {

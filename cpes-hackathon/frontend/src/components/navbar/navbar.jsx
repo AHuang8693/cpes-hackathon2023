@@ -18,7 +18,7 @@ export default function NavBar(){
                 maxWidth: { xs: 100, md: 100 },
                 }}
                 alt="logo"
-                src='/images/tree.png'
+                src='/images/logo.png'
             />
             </Link>
             </div>

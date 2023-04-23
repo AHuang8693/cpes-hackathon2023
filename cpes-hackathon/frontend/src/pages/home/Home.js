@@ -16,8 +16,8 @@ function Home(props) {
             Use this website to connect with other people and carpool, as well as learn how much gas ad our planet you save.
           </div>
           <div className="HomeTopGetStarted">
-            <Link className="link" to="/Carpool">
-              GET STARTED HERE
+            <Link className="link" to="/PostForm">
+              <img src="/images/button.png" alt="Click Here" className="button"/>
             </Link>
           </div>
         </div>
