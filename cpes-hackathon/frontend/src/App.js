@@ -1,6 +1,12 @@
-import MapWrapper from "./MapWrapper";
-import "./styles.css";
+import React from 'react';
+import Map from './Maps';
 
-export default function App() {
-  return <MapWrapper />;
+function App() {
+  return (
+    <div>
+      <Map />
+    </div>
+  );
 }
+
+export default App;
