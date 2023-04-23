@@ -22,7 +22,7 @@ function App() {
         <Route exact path='/Page' element={< Page />}></Route>
         <Route exact path='/Info' element={< Info />}></Route>
         <Route exact path='/PostForm' element={< PostForm/>}></Route> 
-        {/* <Route exact path='/Contacts' element={<Contacts/>}></Route> */}
+        <Route exact path='/Contacts' element={<Contacts/>}></Route>
         {/* <Route exact path='/Settings' element={<Settings/>}></Route> */}
       </Routes>
     </div>
