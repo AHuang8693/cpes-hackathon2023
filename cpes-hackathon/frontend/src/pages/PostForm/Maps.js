@@ -10,6 +10,7 @@ const Maps = ({ source, destination, show }) => {
   const [map, setMap] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [latitude, setLatitude] = useState(null);
+  const [miles, setMiles] = useState(null);
 
   const handleGeocode = async (address) => {
     const [longitude, latitude] = await geocode(address);
@@ -18,6 +19,10 @@ const Maps = ({ source, destination, show }) => {
     console.log(latitude);
     console.log(longitude);
   };
+
+  function getMiles(meters) {
+    return meters*0.000621371192;
+  }
 
   useEffect(() => {
       if (show) {
@@ -38,23 +43,22 @@ const Maps = ({ source, destination, show }) => {
     
         const directions = new Directions({
           accessToken: mapboxgl.accessToken,
-
+        
         });
-
         
         directions.on('route', (event) => {
           const route = event.route[0];
           const distance = route.distance;
+          setMiles(getMiles(distance));
           console.log('Distance:', distance);
         });
-        
-        map.addControl(directions, 'top-left');
 
+        map.addControl(directions, 'top-left');
+        
         map.on('load',  function() {
           handleGeocode(source);
           // directions.setOrigin([latitude, longitude]);
           directions.setOrigin(source); // can be address in form setOrigin("12, Elm Street, NY")
-
 
           handleGeocode(destination);
           // directions.setDestinaion([latitude, longitude]);
@@ -62,7 +66,7 @@ const Maps = ({ source, destination, show }) => {
         })
     
         setMap(map);
-    
+
         return () => {
           map.remove();
         }
