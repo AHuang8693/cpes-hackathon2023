@@ -1,4 +1,18 @@
-.info {
+.Info {
     display: flex;
-    background-color: greenyellow;
+    background-image: linear-gradient(rgba(0, 204, 255, 0.5), rgba(89, 216, 121, 0.5));
+}
+
+.titleaboutus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+}
+.infoaboutus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    margin-left: 600px;
+    margin-right: 600px;
+    font-size: 30px;
+    list-style: none;
 }
