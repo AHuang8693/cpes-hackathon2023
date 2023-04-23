@@ -1,10 +1,14 @@
 
 // import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/navbar/navbar'
 import React, {useState} from "react";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
-import Home from "./Home";
-import Page from "./Page";
+import Home from "./pages/home/Home";
+import Page from "./pages/Page";
+import Info from "./pages/info/info";
+import Contacts from './pages/Contacts/contacts';
+import Settings from './pages/Settings/settings';
 
 
 function App() {
@@ -12,17 +16,13 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/Page">Page</Link>
-        </li>
-      </ul>
+    <NavBar/>
       <Routes>
         <Route exact path='/' element={< Home />}></Route>
         <Route exact path='/Page' element={< Page />}></Route>
+        <Route exact path='/Info' element={< Info />}></Route>
+        <Route exact path='/Contacts' element={<Contacts/>}></Route>
+        <Route exact path='/Settings' element={<Settings/>}></Route>
       </Routes>
     </div>
   </Router>
