@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/navbar/navbar'
 import React, {useState} from "react";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Page from "./pages/Page";
 import Info from "./pages/info/info";
 import Contacts from './pages/Contacts/contacts';

@@ -26,24 +26,21 @@ export default function NavBar(){
                 <ul className='topNavList'>
                     <li className='navListItem'>
                         <Link className='link' to='/'>
-                        Home
+                        HOME
                         </Link>
                     </li>
                     <li className='navListItem'>
                         <Link className='link' to='/Info'>
-                            About Us
+                            ABOUT US
                         </Link>
                     </li>
                     <li className='navListItem'>
-                        Carpool
+                        CARPOOL
                     </li>
                     <li className='navListItem'>
                         <Link className='link' to='/Contacts'>
-                            Contacts
+                            CONTACTS
                         </Link>
-                    </li>
-                    <li className='navListItem'>
-                        Logout
                     </li>
                     
                 </ul>
