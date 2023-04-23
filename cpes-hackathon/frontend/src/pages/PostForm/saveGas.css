@@ -1,0 +1,51 @@
+.HomeTop {
+    font-size: 120px;
+    padding-bottom: 10%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://thumbs.dreamstime.com/b/carpool-ride-share-service-app-group-african-friends-214986678.jpg");
+}
+
+.HomeTopIntro {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.HomeTopDescrip {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 650px;
+    margin-right: 650px;
+
+}
+
+.HomeTopGetStarted {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    margin-left: 550px;
+    margin-right: 550px;
+    border-radius: 20px;
+}
+
+.HomeBottom {
+    background-color: lightgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.HomeBottomList {
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.homelistitemC {
+    font-size: 40px;
+}
+.homelistitem{
+    font-size: 30px;
+}
+.homelistitem1{
+    font-size: 20px;
+}

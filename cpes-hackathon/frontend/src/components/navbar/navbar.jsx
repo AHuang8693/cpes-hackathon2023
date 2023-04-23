@@ -39,15 +39,15 @@ export default function NavBar(){
                             CARPOOL
                         </Link>
                     </li>
-                    <li className='navListItem'>
+                    {/* <li className='navListItem'>
                         <Link className='link' to='/Contacts'>
                             CONTACTS
                         </Link>
-                    </li>
+                    </li> */}
                     
                 </ul>
             </div>
-            <div className='topRight'>
+            {/* <div className='topRight'>
 
                 <Link className='link' to='/settings'><img className = "topPfpImg" src='/images/tree.png'alt='pfp' /></Link>
 
@@ -61,7 +61,7 @@ export default function NavBar(){
 
                 </ul>
 
-            </div>
+            </div> */}
         </div>
 
 
