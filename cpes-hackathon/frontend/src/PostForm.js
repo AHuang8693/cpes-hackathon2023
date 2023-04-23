@@ -85,7 +85,7 @@ const PostForm = () => {
               <h3>{post.name}</h3>
               <p>{post.source} to {post.destination}</p>
             </button>
-            <Maps post={post} show={index === selectedPostIndex} />
+            <Maps source={post.source} destination={post.destination} show={index === selectedPostIndex} />
           </div>
         ))}
       </div>
